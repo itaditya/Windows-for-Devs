@@ -20,5 +20,9 @@
  * Press tab, it will autocomplete to a React class based component boiler.
  * Now just start typing the name of the component, it will automatically change everywhere.
 
- Note - After autocompletion, pressing tab, moves the cursor from point to another point marked by $1, $2 and so on in the snippet.
+ Note - After autocompletion, pressing tab, moves the cursor from stop to another stop marked by $1, $2 and so on in the snippet.
+
+ Read more - http://docs.sublimetext.info/en/latest/extensibility/snippets.html
+
+
 
