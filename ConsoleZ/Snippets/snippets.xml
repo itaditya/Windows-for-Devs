@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConsoleZSnippets>
+    <DownloadUrl>https://raw.githubusercontent.com/cbucher/console/master/Snippets/system.xml</DownloadUrl>
+    <Snippet>
+        <Header>
+            <Title>Artiosys SSH</Title>
+            <Description>Connect To Artiosys Aws via SSH</Description>
+            <Author Url="https://github.com/itaditya" Email="adityaa803@gmail.com">itaditya</Author>
+            <Version>1.0</Version>
+            <ShellTypes>
+                <ShellType>cmd</ShellType>
+            </ShellTypes>
+        </Header>
+
+        <Code>
+            <![CDATA[ssh -i "F:\git\Professional\Artiosys\my-test-server\aditya-test-server.pem" ubuntu@ec2-13-126-185-169.ap-south-1.compute.amazonaws.com
+]]>
+        </Code>
+    </Snippet>
+        <!-- ping -->
+    <Snippet>
+        <Header>
+            <Title>ping</Title>
+            <Description>ping command</Description>
+            <Author Url="https://github.com/cbucher/console" Email="cbucher@users.sourceforge.net">cbucher</Author>
+            <Version>1.0</Version>
+            <ShellTypes>
+                <ShellType>cmd</ShellType>
+                <ShellType>powershell</ShellType>
+            </ShellTypes>
+        </Header>
+        <Declarations>
+            <Literal>
+                <ID>target_name</ID>
+                <ToolTip>The target name.</ToolTip>
+                                <Default>localhost</Default>
+            </Literal>              
+            <Literal>
+                <ID>count</ID>
+                <ToolTip>Number of echo requests to send.</ToolTip>
+                <Default>4</Default>
+            </Literal>
+            <Literal>
+                <ID>timeout</ID>
+                <ToolTip>Timeout in milliseconds to wait for each reply.</ToolTip>
+                <Default>500</Default>
+            </Literal>
+        </Declarations>
+        <Code Delimiter="$">
+            <![CDATA[ping.exe -4 -n "$count$" -w "$timeout$" "$target_name$"
+]]> <!-- return of line, the command is launched after clicking OK -->
+        </Code>
+    </Snippet>
+
+        <!-- restart -->
+    <Snippet>
+        <Header>
+            <Title>restart</Title>
+            <Description>restart computer</Description>
+            <Author Url="https://github.com/cbucher/console" Email="cbucher@users.sourceforge.net">cbucher</Author>
+            <Version>1.0</Version>
+            <ShellTypes>
+                <ShellType>cmd</ShellType>
+            </ShellTypes>
+        </Header>
+        <Declarations>
+            <Literal>
+                <ID>comment</ID>
+                <ToolTip>Comment on the reason for the restart or shutdown.</ToolTip>
+                                <Default>I have a really good reason!</Default>
+            </Literal>              
+        </Declarations>
+        <Code Delimiter="$">
+            <![CDATA[shutdown /r /t 0 /c "$comment$"]]> <!-- no return of line, you must press return after clicking OK -->
+        </Code>
+    </Snippet>
+
+        <!-- hello world -->
+    <Snippet>
+        <Header>
+            <Title>hello world</Title>
+            <Description>The most trivial snippet!</Description>
+            <Author Url="https://github.com/cbucher/console" Email="cbucher@users.sourceforge.net">cbucher</Author>
+            <Version>1.0</Version>
+            <ShellTypes>
+                <ShellType>cmd</ShellType>
+            </ShellTypes>
+        </Header>
+
+        <Code>
+            <![CDATA[@echo hello world]]>
+        </Code>
+    </Snippet>
+
+    <Snippet>
+        <Header>
+            <Title>hello world</Title>
+            <Description>The most trivial snippet!</Description>
+            <Author Url="https://github.com/cbucher/console" Email="cbucher@users.sourceforge.net">cbucher</Author>
+            <Version>1.0</Version>
+            <ShellTypes>
+                <ShellType>powershell</ShellType>
+            </ShellTypes>
+        </Header>
+
+        <Code>
+            <![CDATA[Write-Host 'hello world' -ForegroundColor yellow]]>
+        </Code>
+    </Snippet>
+
+</ConsoleZSnippets>
