@@ -2,9 +2,11 @@
   <content><![CDATA[
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+
 const ${1}Schema = new Schema({
   field: String,
 });
+
 module.exports = mongoose.model('$1', ${1}Schema);
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
